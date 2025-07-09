@@ -1,13 +1,15 @@
 import React from "react";
 // Styles
-import styled, { keyframes } from "styled-components";
+import styled from "styled-components";
 // State
 import PropTypes from "prop-types";
+import { useSelector } from "react-redux";
+import { selectMode } from "../app/appSlice";
 // Icons
 import { Icon } from "@iconify/react";
 // Images
 //import Logo from "../images/logo.svg";
-import QuantumLogo from "../images/Quantum-atom-icon.svg";
+import { ReactComponent as QuantumLogo } from "../images/Quantum-atom-icon.svg";
 import { Light, Dark } from "../config";
 // Components
 import { useErrorBoundary } from "react-error-boundary";
@@ -16,14 +18,6 @@ import { Button, Col, Container, Row } from "react-bootstrap";
 import SocialLinks from "./SocialLinks";
 
 // #region styled-components
-const spin = keyframes`
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-`;
 
 const StyledHero = styled.header`
   position: relative;
@@ -66,21 +60,45 @@ const StyledHero = styled.header`
     height: 10rem;
   }
 
-  /* Remove animation and make logo white */
-  .hero-img {
+  /* Use filter instead of color for SVG theming */
+  .hero-svg {
+    width: 60%; /* Adjust size here - smaller number = smaller logo */
+    height: auto;
+    max-width: 400px; /* Maximum size limit */
+    
+    /* Use filter to change SVG color */
     filter: ${({ theme }) => 
       theme.name === "light" 
-        ? "brightness(0)" /* Black in light mode */
-        : "brightness(0) invert(1)"}; /* White in dark mode */
-    /* Remove animation completely */
+        ? "brightness(0) saturate(100%)" /* Black in light mode */
+        : "brightness(0) saturate(100%) invert(1)"}; /* White in dark mode */
+    
+    /* Alternative: try this if above doesn't work */
+    /* fill: ${({ theme }) => 
+      theme.name === "light" 
+        ? "#000000" 
+        : "#ffffff"}; */
   }
 
-  /* Remove the animation media query */
-  /* @media (prefers-reduced-motion: no-preference) {
-    .hero-img {
-      animation: ${spin} infinite 20s linear;
+  /* Also try styling all paths and shapes inside the SVG */
+  .hero-svg path,
+  .hero-svg circle,
+  .hero-svg g {
+    fill: ${({ theme }) => 
+      theme.name === "light" 
+        ? "#000000" 
+        : "#ffffff"};
+    stroke: ${({ theme }) => 
+      theme.name === "light" 
+        ? "#000000" 
+        : "#ffffff"};
+  }
+
+  @media (max-width: 768px) {
+    .hero-svg {
+      width: 50%; /* Smaller on mobile */
+      max-width: 250px;
     }
-  } */
+  }
 
   @media screen and (min-width: 1180px) {
     &::before {
@@ -110,10 +128,11 @@ const propTypes = {
 };
 
 const Hero = ({ name }) => {
+  const theme = useSelector(selectMode);
   const { showBoundary } = useErrorBoundary();
 
   return (
-    <StyledHero>
+    <StyledHero theme={{ name: theme }}>
       <Container>
         <Row className="align-items-center text-center">
           <Col>
@@ -125,11 +144,7 @@ const Hero = ({ name }) => {
             </div>
           </Col>
           <Col className="d-none d-md-block">
-            <img
-              src={QuantumLogo}
-              alt="Quantum Logo"
-              className="w-75 mx-auto hero-img"
-            />
+            <QuantumLogo className="hero-svg mx-auto" />
           </Col>
         </Row>
         <Row className="align-items-end down-container">

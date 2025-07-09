@@ -25,7 +25,7 @@ export const navLogo = quantumLogo;
  ************************************************************** 
   Add a custom blog icon or update the hero images for the Main section.
 */
-export const Blog = quantumLogo;
+export const Blog = <Icon icon="mdi:home" width="35" height="35" />;
 
 // Hero images (imported above - lines 8-9)
 export { HeroLight as Light };
