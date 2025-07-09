@@ -1,0 +1,46 @@
+<!-- filepath: /home/jorge/Escritorio/githubpages/github-react-portfolio-template-main/src/images/Quantum-atom-icon.svg -->
+<svg
+   width="180mm"
+   height="180mm"
+   viewBox="0 0 180 180"
+   version="1.1"
+   id="svg5"
+   xmlns="http://www.w3.org/2000/svg">
+  <defs id="defs2" />
+  <g id="layer1">
+    <g id="g3516" transform="rotate(-90,68.250003,126.75)">
+      <path
+         id="path3231-3-6-7"
+         style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+         d="m 104.81009,148.59361 c 33.32506,14.5921 57.8989,23.80644 58.05719,-0.0961 0.12275,-23.81943 -24.80584,-14.49597 -58.05719,0.0961 z m 0.37982,-0.10854 c -33.325067,14.5921 -57.898909,23.80644 -58.057194,-0.0961 -0.122756,-23.81943 24.805838,-14.49597 58.057194,0.0961 z" />
+      <path
+         id="path3231-3-6-7-2"
+         style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+         d="m 142.45494,260.80662 c 38.07161,16.67048 67.4612,27.58673 67.94611,0.19096 0.4849,-27.39577 -29.95871,-16.86144 -67.94611,-0.19096 z m 0.43392,-0.124 c -35.26079,10.67711 -52.725896,19.69042 -52.699689,-0.10983 0.02621,-19.80025 16.778649,-12.09326 52.699689,0.10983 z"
+         transform="rotate(45,258.09739,162.06327)" />
+      <path
+         id="path3231-3-6-7-5"
+         style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+         d="m 105.09363,148.68991 c 14.59211,-33.32507 23.80645,-57.898907 -0.0961,-58.057193 -23.819436,-0.122755 -14.495982,24.805833 0.0961,58.057193 z m -0.10854,-0.37983 c 14.59211,33.32507 23.80645,57.89891 -0.0961,58.0572 -23.819429,0.12275 -14.495975,-24.80584 0.0961,-58.0572 z" />
+      <circle
+         style="fill:#000000;stroke:none;stroke-width:6.18111;stroke-linecap:round;stroke-linejoin:round"
+         id="path1568"
+         cx="105"
+         cy="148.5"
+         r="11.154889" />
+      <circle
+         style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+         id="path1568-5"
+         cx="105"
+         cy="148.5"
+         r="28.87756" />
+      <circle
+         style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+         id="path1568-5-6"
+         cx="170.61598"
+         cy="-62.987587"
+         r="80.945892"
+         transform="rotate(75)" />
+    </g>
+  </g>
+</svg>
