@@ -142,6 +142,30 @@ export const publicationsData = [
   },
 ];
 
+/* Certificates
+ ************************************************************** 
+  List the certificates you want to include.
+  Each certificate should be an object with the following properties:
+  - name: string - "Certificate Name"
+  - issuer: string - "Issuing Organization"
+  - date: string - "2024-01-01" (optional)
+  - expiryDate: string - "2025-01-01" (optional)
+  - description: string - "Brief description" (optional)
+  - credentialUrl: string - "https://link-to-certificate.com" (optional)
+  - verificationUrl: string - "https://verification-link.com" (optional)
+*/
+
+export const certificatesData = [
+  {
+    id: 1,
+    name: "Qiskit Global Summer School 2025 - Quantum Excellence",
+    issuer: "IBM",
+    date: "2025-08-29",
+    description: "This credential earner has developed the skills and know-how to explore the world of quantum computing through Qiskit. Through completion of intensive hands-on labs, they have gained significant knowledge and skill in quantum computation, using physics, chemistry, math, and python to begin working on state-of-the-art quantum circuits.",
+    credentialUrl: "https://www.credly.com/badges/0e1f549b-b75b-45f8-8bc1-ea6f4bdf1ef9/public_url"
+  },
+];
+
 /* Contact Info
  ************************************************************** 
   Add your formspree endpoint below.

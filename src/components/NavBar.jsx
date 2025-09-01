@@ -23,9 +23,10 @@ const navLinks = {
     { id: "1T", name: "Home", to: "Home" },
     { id: "2T", name: "About Me", to: "About" },
     { id: "3T", name: "Skills", to: "Skills" },
-    { id: "4T", name: "Projects", to: "Projects" },
-    { id: "5T", name: "Publications", to: "Publications" },
-    { id: "6T", name: "Contact", to: "Contact" },
+    { id: "4T", name: "Certificates", to: "Certificates" },
+    { id: "5T", name: "Projects", to: "Projects" },
+    { id: "6T", name: "Publications", to: "Publications" },
+    { id: "7T", name: "Contact", to: "Contact" },
   ],
 };
 // #endregion
