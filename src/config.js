@@ -121,20 +121,27 @@ export const projectCardImages = [ //TODO
 export const publicationsData = [
   {
     id: 1,
+    title: "QCRAFT AutoScheduler: A library for maximizing qubit utilization on QPUs through quantum circuit multiprogramming",
+    journal: "SoftwareX",
+    date: "2025-10-16",
+    link: "https://doi.org/10.1016/j.softx.2025.102402"
+  },
+  {
+    id: 2,
     title: "Circuit Scheduling Policies on Current QPUs: QCRAFT Scheduler",
     journal: "Lecture Notes in Computer Science",
     date: "2024-12-07",
     link: "https://doi.org/10.1007/978-981-96-0808-9_15"
   },
   {
-    id: 2,
+    id: 3,
     title: "Scheduling Process of Quantum Circuits to Optimize Tasks Execution on Quantum Computers",
     conference: "IEEE International Conference on Quantum Computing and Engineering (QCE)",
     date: "2024-09-15",
     link: "https://doi.org/10.1109/QCE60285.2024.10275"
   },
   {
-    id: 3,
+    id: 4,
     title: "A Noise Validation for Quantum Circuit Scheduling Through a Service-Oriented Architecture",
     journal: "International Journal of Software Engineering and Knowledge Engineering",
     date: "2024-08-30",
