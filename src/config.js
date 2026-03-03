@@ -130,7 +130,7 @@ export const publicationsData = [
     id: 2,
     title: "Quantum Island Mapping: Optimizing Multi-Circuit Execution in Quantum Processors",
     journal: "IEEE International Conference on Quantum Computing and Engineering (QCE)",
-    date: "2024-08-30",
+    date: "2025-08-30",
     link: "https://doi.org/10.1109/QCE65121.2025.00091"
   },
   {
