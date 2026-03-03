@@ -30,9 +30,13 @@ const Publications = () => {
                       <Icon icon="simple-icons:orcid" className="fs-4 text-success" />
                       <span className="ms-1">ORCID</span>
                     </a>
-                    <a href="https://scholar.google.es/citations?user=bA3ApksAAAAJ&hl=es&oi=ao" target="_blank" rel="noopener noreferrer" className="text-decoration-none">
+                    <a href="https://scholar.google.es/citations?user=bA3ApksAAAAJ&hl=es&oi=ao" target="_blank" rel="noopener noreferrer" className="text-decoration-none me-3">
                       <Icon icon="simple-icons:googlescholar" className="fs-4 text-primary" />
                       <span className="ms-1">Google Scholar</span>
+                    </a>
+                    <a href="https://www.researchgate.net/profile/Jorge-Casco-Seco" target="_blank" rel="noopener noreferrer" className="text-decoration-none">
+                      <Icon icon="simple-icons:researchgate" className="fs-4 text-info" />
+                      <span className="ms-1">ResearchGate</span>
                     </a>
                   </div>
                 </Col>
