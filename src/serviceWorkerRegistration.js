@@ -33,6 +33,9 @@ export function register(config) {
 
     window.addEventListener("load", () => {
       const swUrl = `${process.env.PUBLIC_URL}/service-worker.js`;
+      
+      // Determine scope based on PUBLIC_URL to isolate service workers by path
+      const scope = process.env.PUBLIC_URL || "/";
 
       if (isLocalhost) {
         // This is running on localhost. Let's check if a service worker still exists or not.
@@ -47,16 +50,19 @@ export function register(config) {
           );
         });
       } else {
-        // Is not localhost. Just register service worker
-        registerValidSW(swUrl, config);
+        // Is not localhost. Just register service worker with scope
+        registerValidSW(swUrl, config, scope);
+        
+        // Unregister service workers from other paths to prevent cache pollution
+        unregisterOtherServiceWorkers(scope);
       }
     });
   }
 }
 
-function registerValidSW(swUrl, config) {
+function registerValidSW(swUrl, config, scope = "/") {
   navigator.serviceWorker
-    .register(swUrl)
+    .register(swUrl, { scope })
     .then((registration) => {
       registration.onupdatefound = () => {
         const installingWorker = registration.installing;
@@ -137,5 +143,20 @@ export function unregister() {
       .catch((error) => {
         console.error(error.message);
       });
+  }
+}
+
+// Unregister service workers from other paths to prevent cache conflicts
+function unregisterOtherServiceWorkers(currentScope) {
+  if ("serviceWorker" in navigator) {
+    navigator.serviceWorker.getRegistrations().then((registrations) => {
+      registrations.forEach((registration) => {
+        // If the registered scope doesn't match the current scope, unregister it
+        if (registration.scope !== new URL(currentScope, window.location.href).href) {
+          console.log("Unregistering service worker from:", registration.scope);
+          registration.unregister();
+        }
+      });
+    });
   }
 }
