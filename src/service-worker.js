@@ -53,6 +53,10 @@ registerRoute(
 
     if (url.pathname.startsWith("/_")) {
       return false;
+    } // Only handle root path - skip any other repo paths (e.g., /apuntes, /otro-repo)
+
+    if (url.pathname !== "/") {
+      return false;
     } // If this looks like a URL for a resource, because it contains // a file extension, skip.
 
     if (url.pathname.match(fileExtensionRegexp)) {
