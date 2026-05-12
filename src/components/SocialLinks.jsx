@@ -38,6 +38,15 @@ const SocialLinks = () => {
       >
         <Icon icon="icomoon-free:github" />
       </a>
+      <a
+        href="https://jorgecs.github.io/apuntes"
+        aria-label="Mis apuntes de clase"
+        className="link-icons"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <Icon icon="mdi:book-open-page-variant" />
+      </a>
       {isSuccess &&
         socialsData.map((element, index) => {
           let icon;
